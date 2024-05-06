@@ -1,0 +1,140 @@
+import React,{useEffect} from "react";
+
+
+const ContactMe = () => {
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbzdTKEVEe_nTFG-mlEiXUKp2EcRCvuN6rfzydF7xbv4_4hmCFheDIjo9QwNILsM3MGD/exec";
+
+  
+  useEffect(() => {
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("msg")
+    const submitHandler = (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          // console.log("Success!", response);
+        msg.innerHTML='Message Send Successfully!!!';
+        setTimeout(() => {
+          msg.innerHTML='';
+        }, 3000);
+
+        form.reset();
+      })
+        .catch((error) => console.error("Error!", error.message));
+    };
+
+    form.addEventListener("submit", submitHandler);
+
+    // Cleanup: Remove the event listener when the component unmounts
+    return () => {
+      form.removeEventListener("submit", submitHandler);
+    };
+  }, []); // Empty dependency array means this effect runs only once after the component mounts
+
+  return (
+    <div>
+      <section className="text-gray-600 body-font relative">
+        <div className="container px-5 py-10 mx-auto">
+          <div className="flex flex-col text-center w-full mb-12">
+            <h1 className="sm:text-3xl cursor-pointer text-2xl font-medium title-font mb-4 text-gray-900">
+              Contact Us
+            </h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+              Hi there! I'm all about making cool stuff for the web. I build
+              websites and apps that are easy to use and look great. I use HTML,
+              CSS, JavaScript, React.js , Bootstrap CSS, Tailwind CSS and Redux
+              to bring ideas to life!
+            </p>
+          </div>
+          <form name="submit-to-google-sheet">
+          <div className="lg:w-1/2 md:w-2/3 mx-auto">
+            <div className="flex flex-wrap -m-2">
+              <div className="p-2 w-full">
+                <div className="relative">
+                  <label
+                    htmlFor="email"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    My Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={"khushburkothari@gmail.com"}
+                    readOnly
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                   
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-1/2">
+                <div className="relative">
+                  <label
+                    htmlFor="name"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Enter Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="Name"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-1/2">
+                <div className="relative">
+                  <label
+                    htmlFor="email"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Enter Your Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="Email"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-full">
+                <div className="relative">
+                  <label
+                    htmlFor="message"
+                    className="leading-7 text-sm text-gray-600"
+                  >
+                    Sent Message To Me
+                  </label>
+                  <textarea
+                    id="message"
+                    name="Message to me"
+                    className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    defaultValue={""}
+                  />
+                </div>
+              </div>
+              <div className="p-2 w-full">
+                <button className="flex mx-auto text-slate-900 bg-slate-300 border-0 py-2 mb-3 px-8 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+          </form>
+          <div className=" h-5">
+          <span id="msg" className=" text-green-600 text-2xl font-bold"> </span>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ContactMe;
