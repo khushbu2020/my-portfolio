@@ -39,7 +39,7 @@ const Hero = () => {
        
       <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
       {/* <a href="https://drive.google.com/file/d/1V38T9nLvmQIvShuF4Rx1kxSItfkXhjlX/view?usp=drivesdk" download={"khushbu_CV.pdf"} target='_balck' > */}
-      <a href="./khushbuCV.pdf" download  >
+      <a href="./Khushbu_CV.pdf" download  >
               Download CV 
               </a> 
         </button>
