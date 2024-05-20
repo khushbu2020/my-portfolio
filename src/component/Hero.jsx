@@ -9,7 +9,7 @@ const Hero = () => {
 
     useEffect(() => {
       const typed = new Typed(el.current, {
-        strings: ['<i>Web</i> Developer', 'Frontend Developer','Backend Developer','<i>Web</i> Designer'],
+        strings: ['<i>Web</i> Developer', 'Frontend Developer','Backend Developer','<i>Web</i> Designer', '<i>Web</i> Developer'],
         typeSpeed: 50,
       });
   

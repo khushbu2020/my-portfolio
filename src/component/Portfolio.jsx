@@ -5,9 +5,9 @@ const Portfolio = () => {
     <div>
       <section className="text-gray-600 bg-slate-300 body-font">
   <div className="container px-5 py-10 mx-auto">
-    <div className="flex flex-col text-center w-full mb-10">
+    <div className="flex flex-col text-justify w-full mb-10">
       <h1 className="sm:text-3xl cursor-pointer text-2xl font-medium title-font mb-4 text-gray-900">
-        <u>THE PROJECTS</u>
+        <u className=' flex justify-center'>THE PROJECTS</u>
       </h1>
       <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
       I've utilized HTML, CSS, Bootstrap, JavaScript, React.js, Redux, and Tailwind CSS to build a variety of projects, spanning from responsive websites with Bootstrap and Tailwind CSS to dynamic web applications with React.js and Redux. Additionally, I've crafted custom-styled interfaces using HTML, CSS, and JavaScript. These projects underscore my commitment to user-friendly experiences and staying current with the latest technologies and best practices in web development.

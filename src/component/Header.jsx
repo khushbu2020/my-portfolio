@@ -18,7 +18,7 @@ const Header = () => {
               className="w-10 h-10 cursor-none text-white rounded-full"
               alt="portfolio-icon"
             />
-            <span className="ml-3 text-xl cursor-pointer">MY_Portfolio</span>
+            <span className="ml-3 text-xl cursor-pointer">Portfolio</span>
           </Link>
           <nav className="md:ml-auto cursor-pointer md:mr-auto flex flex-wrap items-center text-base justify-center">
             <Link

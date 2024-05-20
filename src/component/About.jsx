@@ -17,7 +17,7 @@ const About = () => {
       <h1 className="title-font sm:text-4xl text-3xl mb-4 cursor-pointer font-medium text-gray-900">
         About Me
       </h1>
-      <p className="mb-8 leading-relaxed">
+      <p className="mb-8 text-justify leading-relaxed">
       I love building websites! I know HTML, CSS, and JavaScript well, and I'm really good at making interactive things with React and Redux. I enjoy working with others to create user-friendly websites and always keep learning about new web stuff!
       </p>
      
@@ -43,11 +43,7 @@ const About = () => {
           </a>
         
         </button>
-        <button className=" text-black inline-flex py-3 px-5 rounded-3xl items-center lg:ml-4 md:mr-4 ml-4 md:mt-4 mt-0 lg:mt-0 hover:bg-gray-200 focus:outline-none" style={{ background: "linear-gradient(#ffdf9e,#ffc273,#e56969,#c1558b,#8a49a1)"}}>
-          <a href="https://www.instagram.com/khushbu20_11?utm_source=qr&igsh=MW1tdHVkYzZnbXAzcg==" target='_blank'> <i className="fa-brands fa-instagram text-2xl text-white" style={{}}></i></a>
-         
-        </button>
-        
+       
       </div>
     </div>
   </div>

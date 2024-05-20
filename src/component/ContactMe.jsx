@@ -23,14 +23,14 @@ const ContactMe = () => {
     <div>
       <section className="text-gray-600 body-font relative">
         <div className="container px-5 py-10 mx-auto">
-          <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl cursor-pointer text-2xl font-medium title-font mb-4 text-gray-900">
-              Contact Us
+          <div className="flex flex-col text-justify w-full mb-12">
+            <h1 className="sm:text-3xl cursor-pointer  text-2xl font-medium title-font mb-4 text-gray-900">
+             <u className="flex justify-center"> Contact Us</u>
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
               Hi there! I'm all about making cool stuff for the web. I build
               websites and apps that are easy to use and look great. I use HTML,
-              CSS, JavaScript, React.js , Bootstrap CSS, Tailwind CSS and Redux
+              CSS, JavaScript, React.js, Node.js,  Bootstrap CSS, Tailwind CSS and Redux
               to bring ideas to life!
             </p>
           </div>
