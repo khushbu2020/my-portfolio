@@ -35,26 +35,32 @@ const Hero = () => {
         I'm a web Designer with extensive experience for over 1 years.
         <br />expertise to create and website design, Frontend design, and many more... 
       </p>
-      <div className="flex justify-center">
-       
-      <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-      {/* <a href="https://drive.google.com/file/d/1V38T9nLvmQIvShuF4Rx1kxSItfkXhjlX/view?usp=drivesdk" download={"khushbu_CV.pdf"} target='_balck' > */}
-      <a href="./Khushbu_CV.pdf" download  >
-              Download CV 
-              </a> 
-        </button>
-        <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-        <Link
-              to="about"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              className="mr-5 hover:text-gray-900"
-            >
-              More About Me
-            </Link>
-        </button>
-      </div>
+       <div className=" flex flex-wrap gap-2">
+              <button
+                className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg  "
+                style={{ margin: "0px 5px 2px 0px" }}
+              >
+                {/* <a href="https://drive.google.com/file/d/1V38T9nLvmQIvShuF4Rx1kxSItfkXhjlX/view?usp=drivesdk" download={"khushbu_CV.pdf"} target='_balck' > */}
+                <a href="./Khushbu_CV.pdf" download>
+                  Download CV
+                </a>
+              </button>
+
+              <button
+                className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg  "
+                style={{ margin: "0px 5px 2px 0px" }}
+              >
+                <Link
+                  to="about"
+                  spy={true}
+                  smooth={true}
+                  duration={1000}
+                  className="mr-5 hover:text-gray-900"
+                >
+                  More About Me
+                </Link>
+              </button>
+            </div>
     </div>
     <div className="lg:max-w-lg lg:w-full me-10 md:w-1/2 w-5/6">
       <img
